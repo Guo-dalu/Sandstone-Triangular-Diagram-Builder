@@ -1,0 +1,61 @@
+<!--
+	作者：julyxmg@foxmail.com
+	时间：2017-03-14
+	描述： Sandstone Triangular Diagram Builder
+ * 
+ * It's a light-weighted, user-friendly tool for drawing sandstone triangular diagram. 
+ * Using native javascript language completely, this tool is available on offine environment
+ * Please feel free to use, and you may add some new functions based on it.
+ * It's my first front-end work, hope you like it! 
+ * here is my blog addresss :
+ * http://blog.csdn.net/github_36487770
+-->
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>砂岩三角图生成器 BY十方魔</title>
+		<link rel="stylesheet" type="text/css" href="CSS1.css"/>
+	</head>
+	<body>
+<header><h1>砂岩三角图速绘</h1></header>
+<div id="datasource" >
+<form>
+<fieldset>
+	<legend>砂岩三端元组分输入框</legend>
+	<div id="lineinput"><h3>请以数字格式输入（无百分号），如有多个数字以空格间隔</h3>
+	石英含量<input type="text"  id="quartz" placeholder="示例：70 34" required="required" /><br /><div class="warn" id="qtwarn"></div>
+	长石含量<input type="text" id="feldspar" required="required" /><br /><div class="warn" id="fewarn"></div>
+	岩屑含量<input type="text" id="debris" required="required" /><br /></div><div class="warn" id="drwarn"></div>
+	<div id="choice"><a id="showarea">数据太多？<br />请点击我<br />用文本框输入大量数据</a></div>
+	<div id="txtinput" ><h3 id="txtinputifo">请按石英、长石、岩屑的顺序三个一组输入数字（无百分号），以空格间隔</h3>
+		<textarea id="dataarea" name="dataarea" rows="10" onscroll="onscroll"></textarea>
+	<div class="warn" id="txtwarn"></div>
+	</div>
+ <button type="button" name="display" id="displaybtn">显示散点</button>
+  <button type="reset" name="resize" id="resizebtn" >重置数据</button><div class="warn" id="sumwarn" name="sumwarn"></div>
+	</fieldset>
+	</form>
+</div>
+<div id="diagramwithtitle">
+	<h3>砂岩三角图</h3>
+<div><canvas   width="500px" height="400px" id="diagram">Your browser does not support the HTML5 canvas tag.
+</canvas>
+</div>
+<div id="explain" >
+	<p id="samplenum"></p>
+	<ul>
+		<li><span id="qtstone" class="stonename"></span></li>
+		<li><span id="fdstone" class="stonename"></span></li>
+		<li><span id="destone" class="stonename"></span></li>
+	</ul>
+</div>
+</div>
+<footer>
+	<p>制作者&copy;十方魔&nbsp;&nbsp;&nbsp;<a href="http://blog.csdn.net/github_36487770" target="_blank">技术博客：http://blog.csdn.net/github_36487770</a><br />如有问题或职位提供，请联系<a href="mailto:julyxmg@foxmail">julyxmg@foxmail.com</a></p>
+	
+</footer>
+<script src="PPP.js">
+</script>
+	</body>
+</html>
